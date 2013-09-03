@@ -22,7 +22,11 @@ public class TradingClient implements EntryPoint {
 	 * Entry point method.
 	 */
 	public void onModuleLoad() {
+		addStockUI();
+		addCalculateUI();
+	}
 
+	private void addStockUI() {
 		// Create table for stock data.
 		stocksFlexTable.setText(0, 0, "Symbol");
 		stocksFlexTable.setText(0, 1, "Price");
@@ -43,10 +47,15 @@ public class TradingClient implements EntryPoint {
 
 		// Move cursor focus to the input box.
 		newSymbolTextBox.setFocus(true);
-		
+
 		AddStockHandler addStockHandler = new AddStockHandler(this);
 		addStockButton.addClickHandler(addStockHandler);
 		newSymbolTextBox.addKeyDownHandler(addStockHandler);
+	}
+
+	private void addCalculateUI() {
+		Button calcButton = new Button("Calculate");
+		calcButton.addClickHandler(new CalculateHandler());
 	}
 
 	public TextBox getNewSymbolTextBox() {
