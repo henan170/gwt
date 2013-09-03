@@ -56,6 +56,7 @@ public class TradingClient implements EntryPoint {
 	private void addCalculateUI() {
 		Button calcButton = new Button("Calculate");
 		calcButton.addClickHandler(new CalculateHandler());
+		RootPanel.get("stockList").add(calcButton);
 	}
 
 	public TextBox getNewSymbolTextBox() {

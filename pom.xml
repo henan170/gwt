@@ -62,11 +62,13 @@
 					<execution>
 						<goals>
 							<goal>compile</goal>
-							<goal>generateAsync</goal>
 							<goal>test</goal>
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

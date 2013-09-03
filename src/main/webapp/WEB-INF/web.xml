@@ -4,17 +4,17 @@
               http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
 
-	<!-- Servlets 
+	<!-- Servlets -->
 	<servlet>
 		<servlet-name>greetServlet</servlet-name>
-		<servlet-class>com.google.gwt.sample.stockwatcher.server.GreetingServiceImpl</servlet-class>
+		<servlet-class>com.evry.trading.server.GreetingServiceImpl</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>greetServlet</servlet-name>
-		<url-pattern>/stockwatcher/greet</url-pattern>
+		<url-pattern>/trading/greet</url-pattern>
 	</servlet-mapping>
--->
+
 
 	<!-- Default page to serve -->
 	<welcome-file-list>
